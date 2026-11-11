@@ -1,0 +1,29 @@
+PS C:\Users\B6\Downloads\parcial> git show v1.0.0:envios.py > /tmp/envios_v1.py ; python -m radon cc /tmp/envios_v1.py -s ; python -m radon cc envios.py -s -a
+C:/Users/B6/AppData/Local/Temp/envios_v1.py
+    F 11:0 calc - C (15)
+
+envios.py
+    F 84:0 validar_peso - A (3)
+    F 98:0 validar_dia - A (3)
+    F 104:0 obtener_descuento_cupon - A (3)
+    F 114:0 tarifa_base - A (3)
+    F 90:0 obtener_zona - A (2)
+    F 141:0 calc - A (2)
+    C 45:0 Zona - A (2)
+    C 53:0 ZonaUrbana - A (2)
+    C 58:0 ZonaConRecargoPorcentual - A (2)
+    C 66:0 ZonaRural - A (2)
+    C 71:0 ZonaNacional - A (2)
+    F 123:0 es_fin_de_semana - A (1)
+    F 127:0 aplicar_descuento - A (1)
+    F 131:0 aplicar_costo_minimo - A (1)
+    F 136:0 redondear - A (1)
+    M 49:4 Zona.aplicar_recargo - A (1)
+    M 54:4 ZonaUrbana.aplicar_recargo - A (1)
+    M 59:4 ZonaConRecargoPorcentual.__init__ - A (1)
+    M 62:4 ZonaConRecargoPorcentual.aplicar_recargo - A (1)
+    M 67:4 ZonaRural.__init__ - A (1)
+    M 72:4 ZonaNacional.__init__ - A (1)
+
+21 blocks (classes, functions, methods) analyzed.
+Average complexity: A (1.7142857142857142)
