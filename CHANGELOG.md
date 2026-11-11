@@ -3,6 +3,16 @@
 Todos los cambios notables de este proyecto se documentan aquí.
 El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y el proyecto usa [Versionado Semántico](https://semver.org/lang/es/).
 
+## [2.1.0] - 2026-11-11
+
+### Añadido
+- Zona insular (San Andrés) con recargo del 70 % (`ZonaInsular`).
+- Los envíos insulares no aceptan cupón: si llega uno, `calc` lanza error.
+- 15 pruebas nuevas de la zona insular, escritas antes de la implementación.
+
+### Cambiado
+- La zona `"insular"` ya no es una zona inválida. La prueba CP-07 ahora usa `"internacional"` como ejemplo de zona inválida.
+
 ## [2.0.0] - 2026-11-11
 
 ### Cambiado
@@ -35,6 +45,7 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 ### Añadido
 - Versión heredada de `calc` con su `CONFIG` personalizado, sin modificar. Contiene los defectos DEF-01 a DEF-06.
 
+[2.1.0]: https://github.com/calo159/EnviaYa/compare/v2.0.0...v2.1.0
 [2.0.0]: https://github.com/calo159/EnviaYa/compare/v1.0.1...v2.0.0
 [1.0.1]: https://github.com/calo159/EnviaYa/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/calo159/EnviaYa/releases/tag/v1.0.0
