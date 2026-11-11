@@ -41,7 +41,7 @@ def test_estrategias_de_zona(zona, esperado):
 def test_obtener_zona_devuelve_la_estrategia_correcta():
     assert isinstance(obtener_zona("rural"), ZonaRural)
     with pytest.raises(ValueError, match="zona"):
-        obtener_zona("insular")
+        obtener_zona("internacional")
 
 
 @pytest.mark.parametrize("dia, esperado", [

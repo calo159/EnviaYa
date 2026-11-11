@@ -35,7 +35,7 @@ def test_r1_peso_en_los_limites_validos(caso, peso, esperado):
 
 def test_cp07_zona_invalida_es_error():
     with pytest.raises(ValueError):
-        calc(5, "insular", "normal", 1)
+        calc(5, "internacional", "normal", 1)
 
 
 @pytest.mark.parametrize("caso, dia", [
