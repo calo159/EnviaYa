@@ -1,0 +1,49 @@
+* 6094fea (HEAD -> main) docs: gestion de configuracion, versionado semantico y notas de version (Parte 7); README
+*   6bb3b6a (tag: v2.1.0) Merge branch 'feature/zona-insular': nueva zona insular
+|\  
+| * 8cc6b3b (feature/zona-insular) docs: analisis de impacto de la zona insular (Parte 8) y CHANGELOG 2.1.0
+| * e4fa324 feat: zona insular (San Andres) con recargo del 70 % y sin cupones
+| * 8b8ea0e test: pruebas de la zona insular escritas primero (rojo); CP-07 usa otra zona invalida
+|/  
+* 20f61a2 (tag: v2.0.0) docs: malos olores, clasificacion, UML, regresion y comparacion (Parte 6) y CHANGELOG
+*   8224a90 Merge branch 'refactor/estrategia': refactorizacion con patron Estrategia
+|\  
+| * 3bbe5df (refactor/estrategia) test: pruebas de unidad de las funciones y estrategias extraidas
+| * 066579f refactor: extrae funciones, constantes con nombre, quita flag y aplica Estrategia a las zonas
+|/  
+* c8ef56a test: evidencia de regresion en verde tras las correcciones (v1.0.1)
+*   0593ea4 (tag: v1.0.1) Merge branch 'fix/DEF-06'
+|\  
+| * 6d5e766 (fix/DEF-06) fix(DEF-06): redondea al multiplo de 100 mas cercano, los 50 suben (R8)
+|/  
+*   61b64cf Merge branch 'fix/DEF-05'
+|\  
+| * 2dbfedd (fix/DEF-05) fix(DEF-05): un cupon inexistente lanza error (R7)
+|/  
+*   1fec9f2 Merge branch 'fix/DEF-04'
+|\  
+| * a40ce54 (fix/DEF-04) fix(DEF-04): el sabado (dia 6) tambien cobra el recargo de fin de semana (R5)
+|/  
+*   23b947e Merge branch 'fix/DEF-03'
+|\  
+| * 2513bae (fix/DEF-03) fix(DEF-03): un dia fuera de 1 a 7 lanza error (R2)
+|/  
+*   93ee641 Merge branch 'fix/DEF-02'
+|\  
+| * 0f82cee (fix/DEF-02) fix(DEF-02): una zona invalida lanza error (R2)
+|/  
+*   14761f3 Merge branch 'fix/DEF-01'
+|\  
+| * 637b9b5 (fix/DEF-01) fix(DEF-01): el tramo 1 no incluye el limite L1 (peso < 3)
+|/  
+* 52c3ecc docs: ejecucion contra v1.0.0, cobertura, registro de defectos y metricas (Parte 5)
+* 0c4d004 docs: grafo de flujo, complejidad ciclomatica y caminos (Parte 4)
+*   efd7f3e Merge branch 'test/suite': suite automatizada de caja negra y caja blanca
+|\  
+| * 32e6d78 (test/suite) test: casos de caja blanca, un caso por camino independiente
+| * 0184e7a test: automatiza los 48 casos de caja negra con pytest
+|/  
+* 7733dfb docs: particiones, valores limite, tabla de decision y matriz de casos (Parte 3)
+* 3c0d169 docs: plan de pruebas con niveles, riesgos y criterios (Parte 2)
+* 0cf003b docs: parametros, especificacion R1-R8 e historias de usuario (Parte 1)
+* 78594fd (tag: v1.0.0) feat: codigo heredado de EnviaYa con CONFIG personalizado
