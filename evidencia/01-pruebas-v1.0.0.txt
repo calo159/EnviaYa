@@ -1,0 +1,106 @@
+﻿PS C:\Users\B6\Downloads\parcial> python -m pytest -v --tb=no --cov=envios --cov-branch --cov-report=term-missing
+============================= test session starts =============================
+platform win32 -- Python 3.13.14, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\B6\AppData\Local\Programs\Python\Python313\python.exe
+rootdir: C:\Users\B6\Downloads\parcial
+plugins: cov-7.1.0
+collecting ... collected 63 items
+
+tests/test_caja_blanca.py::test_cb01_peso_cero PASSED                    [  1%]
+tests/test_caja_blanca.py::test_cb02_peso_mayor_al_maximo PASSED         [  3%]
+tests/test_caja_blanca.py::test_cb03_camino_base PASSED                  [  4%]
+tests/test_caja_blanca.py::test_cb04_tramo_2 PASSED                      [  6%]
+tests/test_caja_blanca.py::test_cb05_tramo_3 PASSED                      [  7%]
+tests/test_caja_blanca.py::test_cb06_zona_rural PASSED                   [  9%]
+tests/test_caja_blanca.py::test_cb07_zona_nacional PASSED                [ 11%]
+tests/test_caja_blanca.py::test_cb08_zona_que_no_existe FAILED           [ 12%]
+tests/test_caja_blanca.py::test_cb09_domingo PASSED                      [ 14%]
+tests/test_caja_blanca.py::test_cb10_cliente_frecuente PASSED            [ 15%]
+tests/test_caja_blanca.py::test_cb11_cliente_vip PASSED                  [ 17%]
+tests/test_caja_blanca.py::test_cb12_cupon_que_no_es_envio10 FAILED      [ 19%]
+tests/test_caja_blanca.py::test_cb13_cupon_envio10 PASSED                [ 20%]
+tests/test_caja_blanca.py::test_cb14_costo_minimo PASSED                 [ 22%]
+tests/test_caja_blanca.py::test_cb15_flag_imprime_el_costo PASSED        [ 23%]
+tests/test_caja_negra.py::test_r1_peso_invalido[CP-01-0] PASSED          [ 25%]
+tests/test_caja_negra.py::test_r1_peso_invalido[CP-02--0.01] PASSED      [ 26%]
+tests/test_caja_negra.py::test_r1_peso_invalido[CP-05-50.01] PASSED      [ 28%]
+tests/test_caja_negra.py::test_r1_peso_en_los_limites_validos[CP-03-0.01-6000] PASSED [ 30%]
+tests/test_caja_negra.py::test_r1_peso_en_los_limites_validos[CP-04-50-41000] PASSED [ 31%]
+tests/test_caja_negra.py::test_r1_peso_en_los_limites_validos[CP-06-49.99-41000] FAILED [ 33%]
+tests/test_caja_negra.py::test_cp07_zona_invalida_es_error FAILED        [ 34%]
+tests/test_caja_negra.py::test_r2_dia_fuera_de_rango_es_error[CP-08-0] FAILED [ 36%]
+tests/test_caja_negra.py::test_r2_dia_fuera_de_rango_es_error[CP-09-8] FAILED [ 38%]
+tests/test_caja_negra.py::test_r3_tarifa_base[CP-10-2.99-6000] PASSED    [ 39%]
+tests/test_caja_negra.py::test_r3_tarifa_base[CP-11-3-9000] FAILED       [ 41%]
+tests/test_caja_negra.py::test_r3_tarifa_base[CP-12-3.01-9000] PASSED    [ 42%]
+tests/test_caja_negra.py::test_r3_tarifa_base[CP-13-9.99-9000] PASSED    [ 44%]
+tests/test_caja_negra.py::test_r3_tarifa_base[CP-14-10-9000] PASSED      [ 46%]
+tests/test_caja_negra.py::test_r3_tarifa_base[CP-15-10.01-9000] PASSED   [ 47%]
+tests/test_caja_negra.py::test_r3_tarifa_base[CP-16-25-21000] PASSED     [ 49%]
+tests/test_caja_negra.py::test_r4_recargo_por_zona[CP-17-urbana-9000] PASSED [ 50%]
+tests/test_caja_negra.py::test_r4_recargo_por_zona[CP-18-rural-10800] PASSED [ 52%]
+tests/test_caja_negra.py::test_r4_recargo_por_zona[CP-19-nacional-13500] PASSED [ 53%]
+tests/test_caja_negra.py::test_r5_recargo_fin_de_semana[CP-20-5-9000] PASSED [ 55%]
+tests/test_caja_negra.py::test_r5_recargo_fin_de_semana[CP-21-6-11000] FAILED [ 57%]
+tests/test_caja_negra.py::test_r5_recargo_fin_de_semana[CP-22-7-11000] PASSED [ 58%]
+tests/test_caja_negra.py::test_cp23_recargo_finde_va_antes_del_descuento FAILED [ 60%]
+tests/test_caja_negra.py::test_cp24_cliente_frecuente PASSED             [ 61%]
+tests/test_caja_negra.py::test_cp25_cliente_vip PASSED                   [ 63%]
+tests/test_caja_negra.py::test_cp26_cupon_envio10 PASSED                 [ 65%]
+tests/test_caja_negra.py::test_cp27_vip_y_cupon_se_aplican_ambos PASSED  [ 66%]
+tests/test_caja_negra.py::test_cp28_frecuente_cupon_y_domingo PASSED     [ 68%]
+tests/test_caja_negra.py::test_cp29_cupon_inexistente_es_error FAILED    [ 69%]
+tests/test_caja_negra.py::test_cp30_cupon_en_minuscula_no_existe FAILED  [ 71%]
+tests/test_caja_negra.py::test_cp31_costo_minimo PASSED                  [ 73%]
+tests/test_caja_negra.py::test_cp32_los_50_redondean_hacia_arriba FAILED [ 74%]
+tests/test_caja_negra.py::test_cp33_redondeo_hacia_arriba FAILED         [ 76%]
+tests/test_caja_negra.py::test_cp34_redondeo_hacia_abajo PASSED          [ 77%]
+tests/test_caja_negra.py::test_cp35_justo_sobre_el_minimo PASSED         [ 79%]
+tests/test_caja_negra.py::test_cp36_caso_combinado PASSED                [ 80%]
+tests/test_caja_negra.py::test_tabla_de_decision[TD-01-normal-None-1-9000] PASSED [ 82%]
+tests/test_caja_negra.py::test_tabla_de_decision[TD-02-normal-None-6-11000] FAILED [ 84%]
+tests/test_caja_negra.py::test_tabla_de_decision[TD-03-normal-ENVIO10-1-8100] PASSED [ 85%]
+tests/test_caja_negra.py::test_tabla_de_decision[TD-04-normal-ENVIO10-6-9900] FAILED [ 87%]
+tests/test_caja_negra.py::test_tabla_de_decision[TD-05-frecuente-None-1-8600] FAILED [ 88%]
+tests/test_caja_negra.py::test_tabla_de_decision[TD-06-frecuente-None-6-10500] FAILED [ 90%]
+tests/test_caja_negra.py::test_tabla_de_decision[TD-07-frecuente-ENVIO10-1-7700] FAILED [ 92%]
+tests/test_caja_negra.py::test_tabla_de_decision[TD-08-frecuente-ENVIO10-6-9400] FAILED [ 93%]
+tests/test_caja_negra.py::test_tabla_de_decision[TD-09-vip-None-1-7700] FAILED [ 95%]
+tests/test_caja_negra.py::test_tabla_de_decision[TD-10-vip-None-6-9400] FAILED [ 96%]
+tests/test_caja_negra.py::test_tabla_de_decision[TD-11-vip-ENVIO10-1-6900] FAILED [ 98%]
+tests/test_caja_negra.py::test_tabla_de_decision[TD-12-vip-ENVIO10-6-8400] FAILED [100%]
+
+=============================== tests coverage ================================
+______________ coverage: platform win32, python 3.13.14-final-0 _______________
+
+Name        Stmts   Miss Branch BrPart  Cover   Missing
+-------------------------------------------------------
+envios.py      29      0     26      0   100%
+-------------------------------------------------------
+TOTAL          29      0     26      0   100%
+=========================== short test summary info ===========================
+FAILED tests/test_caja_blanca.py::test_cb08_zona_que_no_existe - Failed: DID ...
+FAILED tests/test_caja_blanca.py::test_cb12_cupon_que_no_es_envio10 - Failed:...
+FAILED tests/test_caja_negra.py::test_r1_peso_en_los_limites_validos[CP-06-49.99-41000]
+FAILED tests/test_caja_negra.py::test_cp07_zona_invalida_es_error - Failed: D...
+FAILED tests/test_caja_negra.py::test_r2_dia_fuera_de_rango_es_error[CP-08-0]
+FAILED tests/test_caja_negra.py::test_r2_dia_fuera_de_rango_es_error[CP-09-8]
+FAILED tests/test_caja_negra.py::test_r3_tarifa_base[CP-11-3-9000] - Assertio...
+FAILED tests/test_caja_negra.py::test_r5_recargo_fin_de_semana[CP-21-6-11000]
+FAILED tests/test_caja_negra.py::test_cp23_recargo_finde_va_antes_del_descuento
+FAILED tests/test_caja_negra.py::test_cp29_cupon_inexistente_es_error - Faile...
+FAILED tests/test_caja_negra.py::test_cp30_cupon_en_minuscula_no_existe - Fai...
+FAILED tests/test_caja_negra.py::test_cp32_los_50_redondean_hacia_arriba - As...
+FAILED tests/test_caja_negra.py::test_cp33_redondeo_hacia_arriba - AssertionE...
+FAILED tests/test_caja_negra.py::test_tabla_de_decision[TD-02-normal-None-6-11000]
+FAILED tests/test_caja_negra.py::test_tabla_de_decision[TD-04-normal-ENVIO10-6-9900]
+FAILED tests/test_caja_negra.py::test_tabla_de_decision[TD-05-frecuente-None-1-8600]
+FAILED tests/test_caja_negra.py::test_tabla_de_decision[TD-06-frecuente-None-6-10500]
+FAILED tests/test_caja_negra.py::test_tabla_de_decision[TD-07-frecuente-ENVIO10-1-7700]
+FAILED tests/test_caja_negra.py::test_tabla_de_decision[TD-08-frecuente-ENVIO10-6-9400]
+FAILED tests/test_caja_negra.py::test_tabla_de_decision[TD-09-vip-None-1-7700]
+FAILED tests/test_caja_negra.py::test_tabla_de_decision[TD-10-vip-None-6-9400]
+FAILED tests/test_caja_negra.py::test_tabla_de_decision[TD-11-vip-ENVIO10-1-6900]
+FAILED tests/test_caja_negra.py::test_tabla_de_decision[TD-12-vip-ENVIO10-6-8400]
+======================== 23 failed, 40 passed in 0.45s ========================
+
+
