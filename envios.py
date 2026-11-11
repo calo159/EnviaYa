@@ -17,6 +17,7 @@ TARIFA_POR_KG_EXTRA = Decimal("800")      # por cada kg sobre L2
 
 RECARGO_RURAL = Decimal("0.20")           # RR
 RECARGO_NACIONAL = Decimal("0.50")        # RN
+RECARGO_INSULAR = Decimal("0.70")         # San Andres (solicitud de cambio)
 
 DIA_SABADO = 6
 DIA_DOMINGO = 7
@@ -44,6 +45,8 @@ CUPONES = {
 # --- Estrategia de zona ---
 class Zona(ABC):
     """Estrategia: como se aplica el recargo de una zona."""
+
+    acepta_cupon = True
 
     @abstractmethod
     def aplicar_recargo(self, valor):
@@ -73,10 +76,20 @@ class ZonaNacional(ZonaConRecargoPorcentual):
         super().__init__(RECARGO_NACIONAL)
 
 
+class ZonaInsular(ZonaConRecargoPorcentual):
+    """San Andres: recargo del 70 % y no acepta cupones."""
+
+    acepta_cupon = False
+
+    def __init__(self):
+        super().__init__(RECARGO_INSULAR)
+
+
 ZONAS = {
     "urbana": ZonaUrbana(),
     "rural": ZonaRural(),
     "nacional": ZonaNacional(),
+    "insular": ZonaInsular(),
 }
 
 
@@ -145,6 +158,8 @@ def calc(peso, zona, cliente, dia, cupon=None):
     estrategia_zona = obtener_zona(zona)
     validar_dia(dia)
     descuento_cupon = obtener_descuento_cupon(cupon)
+    if cupon is not None and not estrategia_zona.acepta_cupon:
+        raise ValueError("los envios insulares no aceptan cupon")
 
     valor = tarifa_base(peso)
     valor = estrategia_zona.aplicar_recargo(valor)

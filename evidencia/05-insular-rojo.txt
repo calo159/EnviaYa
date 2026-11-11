@@ -1,0 +1,35 @@
+PS C:\Users\B6\Downloads\parcial> python -m pytest -v --tb=no -p no:cacheprovider tests/test_zona_insular.py
+============================= test session starts =============================
+platform win32 -- Python 3.13.14, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\B6\AppData\Local\Programs\Python\Python313\python.exe
+rootdir: c:\Users\B6\Downloads\parcial
+plugins: cov-7.1.0
+collecting ... collected 15 items
+
+tests/test_zona_insular.py::test_recargo_insular_del_70_por_ciento[CI-01-2-10200] FAILED [  6%]
+tests/test_zona_insular.py::test_recargo_insular_del_70_por_ciento[CI-02-5-15300] FAILED [ 13%]
+tests/test_zona_insular.py::test_recargo_insular_del_70_por_ciento[CI-03-20-28900] FAILED [ 20%]
+tests/test_zona_insular.py::test_recargo_insular_del_70_por_ciento[CI-04-50-69700] FAILED [ 26%]
+tests/test_zona_insular.py::test_ci05_insular_en_fin_de_semana_suma_antes_de_descuentos FAILED [ 33%]
+tests/test_zona_insular.py::test_ci06_insular_con_cliente_vip FAILED     [ 40%]
+tests/test_zona_insular.py::test_ci07_insular_frecuente_domingo FAILED   [ 46%]
+tests/test_zona_insular.py::test_ci08_insular_vip_sabado_en_el_limite_l1 FAILED [ 53%]
+tests/test_zona_insular.py::test_ci09_insular_no_acepta_cupon_valido FAILED [ 60%]
+tests/test_zona_insular.py::test_ci10_insular_no_acepta_cupon_inexistente PASSED [ 66%]
+tests/test_zona_insular.py::test_ci11_las_otras_zonas_siguen_aceptando_cupon[urbana] PASSED [ 73%]
+tests/test_zona_insular.py::test_ci11_las_otras_zonas_siguen_aceptando_cupon[rural] PASSED [ 80%]
+tests/test_zona_insular.py::test_ci11_las_otras_zonas_siguen_aceptando_cupon[nacional] PASSED [ 86%]
+tests/test_zona_insular.py::test_ci12_peso_invalido_sigue_validandose_en_insular PASSED [ 93%]
+tests/test_zona_insular.py::test_ci13_estrategia_insular FAILED          [100%]
+
+=========================== short test summary info ===========================
+FAILED tests/test_zona_insular.py::test_recargo_insular_del_70_por_ciento[CI-01-2-10200]
+FAILED tests/test_zona_insular.py::test_recargo_insular_del_70_por_ciento[CI-02-5-15300]
+FAILED tests/test_zona_insular.py::test_recargo_insular_del_70_por_ciento[CI-03-20-28900]
+FAILED tests/test_zona_insular.py::test_recargo_insular_del_70_por_ciento[CI-04-50-69700]
+FAILED tests/test_zona_insular.py::test_ci05_insular_en_fin_de_semana_suma_antes_de_descuentos
+FAILED tests/test_zona_insular.py::test_ci06_insular_con_cliente_vip - ValueE...
+FAILED tests/test_zona_insular.py::test_ci07_insular_frecuente_domingo - Valu...
+FAILED tests/test_zona_insular.py::test_ci08_insular_vip_sabado_en_el_limite_l1
+FAILED tests/test_zona_insular.py::test_ci09_insular_no_acepta_cupon_valido
+FAILED tests/test_zona_insular.py::test_ci13_estrategia_insular - ValueError:...
+======================== 10 failed, 5 passed in 0.08s =========================
