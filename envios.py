@@ -1,4 +1,6 @@
 # envios.py
+import math
+
 CONFIG = {
     "L1": 3,
     "L2": 10,
@@ -43,4 +45,4 @@ def calc(p, z, c, d, cup=None, flag=False):
         t = 5000
     if flag:
         print("costo:", t)
-    return int(t / 100) * 100
+    return int(math.floor(round(t, 6) / 100 + 0.5)) * 100
